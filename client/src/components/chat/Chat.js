@@ -31,7 +31,7 @@ constructor(props) {
           </React.Fragment>
         ) : (
           <EnterChat
-                  setUsername={this.setUsername.bind(this)}
+                  setUsername={this.setUserName.bind(this)}
           />
 
         )}
