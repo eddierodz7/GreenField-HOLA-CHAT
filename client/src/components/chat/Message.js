@@ -1,10 +1,8 @@
 import React from 'react';
 
-export default class Message extends React.Component {
-  constructor(props) {
-    super(props);
-    this.satate = {
-
-    }
-  }
+const Message = (props) => {
+    return (
+      <div>
+      </div>
+    )
 }
