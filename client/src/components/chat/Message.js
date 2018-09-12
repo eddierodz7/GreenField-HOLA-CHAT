@@ -1,8 +1,13 @@
 import React from 'react';
 
-const Message = (props) => {
+export default const Message = (props) => {
     return (
-      <div>
+      <div className='message'>
+        <div className='username'>
+          <p>{props.message.username}</p>
+        </div>
+
+      
       </div>
     )
-}
+};
