@@ -1,5 +1,5 @@
 import React from 'react';
-import Chat from './Chat.js';
+
 
 
 export default class ChatBox extends React.Component {
@@ -27,7 +27,7 @@ export default class ChatBox extends React.Component {
       }
     }
   }
-  
+
   render() {
     return (
       <div className="input-group chatbox col-xs-12 col-sm-12 col-md-8 col-lg-10">
