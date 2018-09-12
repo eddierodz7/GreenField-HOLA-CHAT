@@ -14,4 +14,4 @@ render() {
   }
 }
 
-ReactDOM.render(<App/>document.getElementsByClassName('root'));
+ReactDOM.render(<App/>, document.getElementsByClassName('root'));
