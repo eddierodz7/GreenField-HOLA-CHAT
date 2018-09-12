@@ -3,8 +3,7 @@ package-lock.json
 
 #node_modules
 node_modules
-
-
+client/dist/bundle.js
 # misc
 .DS_Store
 .env.local

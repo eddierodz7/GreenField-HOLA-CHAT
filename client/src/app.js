@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import Navbar from './components/Navbar'
 import Chat from './components/chat/Chat'
 
-class App extends React.Component {
+export default class App extends React.Component {
 render() {
   return(
     <React.Fragment>
@@ -14,4 +14,4 @@ render() {
   }
 }
 
-ReactDOM.render(<App/>, document.getElementsByClassName('root'));
+ReactDOM.render(<App/>, document.getElementById('root'));

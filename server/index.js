@@ -1,13 +1,17 @@
-let express = require('express');
-let app = require('express')();
-let server = require('http').Server(app);
+const express = require('express');
+const path = require('path');
+const bodyParser = require('body-parser')
+const app = express();
+const server = require('http').Server(app);
 const io = require('socket.io')(server);
-let port = 8989;
+const port = 8989;
 
-app.use('/assets', express.static(__dirname + '/dist'));
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({extended: true}))
+app.use('/assets', express.static(path.resolve('client/dist')));
 
-app.get('/', (req, res)=>{
-    res.sendFile(__dirname + '/index.html');
+app.get('/', (req, res) => {
+    res.sendFile(path.resolve('client/dist/Index.html'));
 });
 
 server.listen(port, () => {

@@ -7,7 +7,7 @@ export default class Chat extends React.Component {
 
 constructor(props) {
   super(props);
-  this.socket:null;
+  //this.socket:null;
   this.state = {
     username: localStorage.getItem('username') ? localStorage.getItem('username') : '',
     uid: localStorage.getItem('uid') ? localStorage.getItem('uid') : this.generate(),
