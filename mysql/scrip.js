@@ -7,8 +7,8 @@ var connection = mysql.createConnection({
   database : 'Hola'
 });
 
-var selectAll= function(callback) {
-  connection.query('SELECT * FROM ', function(err, results, fields) {
+var selectAllUsers = function(callback) {
+  connection.query('SELECT * FROM users', function(err, results, fields) {
     if(err) {
       callback(err, null);
     } else {
@@ -17,8 +17,8 @@ var selectAll= function(callback) {
   });
 };
 
-varselectAll = function(callback) {
-  connection.query('SELECT * FROM ', function(err, results, fields) {
+var selectAllRoom = function(callback) {
+  connection.query('SELECT * FROM room', function(err, results, fields) {
     if(err) {
       callback(err, null);
     } else {
@@ -27,8 +27,8 @@ varselectAll = function(callback) {
   });
 };
 
-var selectAll= function(callback) {
-  connection.query('SELECT * FROM ', function(err, results, fields) {
+var selectAllMessages = function(callback) {
+  connection.query('SELECT * FROM messages', function(err, results, fields) {
     if(err) {
       callback(err, null);
     } else {
@@ -37,4 +37,6 @@ var selectAll= function(callback) {
   });
 };
 
-module.exports.selectAllDesert = selectAllDesert;
+module.exports.selectAllUsers = selectAllUsers;
+module.exports.selectAllRoom = selectAllRoom;
+module.exports.selectAllMessages = selectAllMessages;
