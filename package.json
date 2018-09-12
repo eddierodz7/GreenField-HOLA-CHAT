@@ -5,7 +5,7 @@
   "main": "App.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack index.js",
+    "start": "webpack --mode development --config webpack.config.js",
     "dev-server": "nodemon server/index.js",
     "prod": "cross-env NODE_ENV=production webpack --config webpack.config.js",
     "dev": "cross-env NODE_ENV=development webpack --config webpack.config.js"
@@ -33,12 +33,14 @@
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
-    "babel-loader": "^8.0.2",
-    "babel-preset-es2015": "^6.24.1",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
     "cross-env": "^5.1.6",
     "css-loader": "^1.0.0",
     "file-loader": "^2.0.0",
+    "less": "^3.8.1",
     "less-loader": "^4.1.0",
     "mini-css-extract-plugin": "^0.4.0",
     "node-sass": "^4.9.0",

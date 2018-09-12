@@ -1,7 +1,7 @@
 let express = require('express');
 let app = require('express')();
-let server = require('http').server(app);
-const io = require('socket.oi')(server);
+let server = require('http').Server(app);
+const io = require('socket.io')(server);
 let port = 8989;
 
 app.use('/assets', express.static(__dirname + '/dist'));
