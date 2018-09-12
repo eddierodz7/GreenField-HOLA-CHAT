@@ -1,7 +1,6 @@
 import React from 'react'
 
-export default Messages extends React.Component {
-
+export default class Messages extends React.Component {
   constructor(props) {
     super(props);
     this.state= {
@@ -21,7 +20,7 @@ export default Messages extends React.Component {
   }
   assignHeight() {
       let chat_height = this.state.gif ? 200 : 35;
-      let _docHeight = (document.height !=== undefined) ? document.height : document.body.offsetHeight;
+      let _docHeight = (document.height !== undefined) ? document.height : document.body.offsetHeight;
       this.setState({
         height : _docHeight - 65 - chat_height
       });
@@ -39,19 +38,19 @@ toggleGif(e) {
 render() {
   return(
     <div className="messages col-xs-12 col-sm-12 col-md-8 col-lg-10" style={{height: this.state.height + 'px'}}>
-         {this.state.messages.length ? (
+         {this.state.messages.length ?
               this.state.messages.map((messages, i) => {
-                  return (
                     <Messages key={i} messages={message}/>
-                  )
               })
-            ) : <div className="no-message"> chat niggas </div>}
-            {this.state.gif ? (
+            : this.state.gif ? (
+              <div className="no-message">
               <GifBox
                   sendMessage={this.props.sendMessage}
                   toggleGif={this.toggleGif.bind(this)}
               />
-            )}
+              </div>)
+            : (<p>"There are no messages in chat"</p>)
+          }
     </div>
     )
   }
