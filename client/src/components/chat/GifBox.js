@@ -65,13 +65,36 @@ class GifBox extends React.Component {
     })
     .then(function(response){
       let results = response.data.data;
-      if(result.length){
+      if(results.length){
           let gifs = results.map((gif) =>{
             return{
-              original
-            }
+              original: gif.images.original.url,
+              fixed: gif.images.fixed_height.url
+            };
+          });
+          this.setState({
+            GIFs: this.state.GIFs.concat(gifs)
+          }, () => {
+            this.registerScrollEvent();
           })
-      }
-    })
+       }else{
+         this.setState({
+           GIFs: [],
+           massege: 'no GIFs found'
+         })
+       }
+    }.bind(this))
+    .catch(function(error){
+        console.log(error);
+    });
   }
+
+  sendGIF(gif, e){
+     console.log(gif);
+     this.props.sendMessage({
+         type: 'gif',
+         url: gif.original
+     });
+  }
+  
 }
