@@ -27,4 +27,27 @@ export default class ChatBox extends React.Component {
       }
     }
   }
+  
+  render() {
+    return (
+      <div className="input-group chatbox col-xs-12 col-sm-12 col-md-8 col-lg-10">
+      <div className="input-group-prepend">
+        <button
+             className="btn btn-outline-secondary"
+             type="button"
+             onClick={this.props.toggleGif}
+        >
+            <i className="fa fa-image"/> GIF
+         </button>
+      </div>
+         <input
+                  className="form-control"
+                  placeholder="Type message"
+                  value={this.state.message}
+                  onChange={this.onChange.bind(this)}
+                  onKeyUp={this.onKeyUp.bind(this)}
+            />
+      </div>
+    )
+  }
 }
