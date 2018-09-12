@@ -66,7 +66,7 @@ class GifBox extends React.Component {
     .then(function(response){
       let results = response.data.data;
       if(results.length){
-          let gifs = results.map((gif) =>{
+          let gifs = results.map((gif) => {
             return{
               original: gif.images.original.url,
               fixed: gif.images.fixed_height.url
@@ -76,7 +76,7 @@ class GifBox extends React.Component {
             GIFs: this.state.GIFs.concat(gifs)
           }, () => {
             this.registerScrollEvent();
-          })
+          });
        }else{
          this.setState({
            GIFs: [],
@@ -96,5 +96,52 @@ class GifBox extends React.Component {
          url: gif.original
      });
   }
-  
+
+
+  render(){
+        return(
+          <div className="gifbox col-xs-12 col-sm-12 col-md-8 col-lg-10">
+              <div className="input-group">
+                  <div className="input-group-prepend">
+                      <button
+                          className="btn btn-outline-secondary"
+                          type="button"
+                          onClick={this.props.toggleGif}
+                      >
+                          <i className="fa fa-comment"/> Messages
+                      </button>
+                  </div>
+                  <input
+                      className="form-control"
+                      placeholder="Search Gif"
+                      value={this.state.query}
+                      onChange={this.onChange.bind(this)}
+                      onKeyUp={this.onKeyUp.bind(this)}
+                  />
+              </div>
+
+              <div className="gifs">
+                  {this.state.GIFs.length ? this.state.GIFs.map((gif, i) => {
+                      return (
+                          <div className="gif" key={i}>
+                              <i
+                                  className="fa
+                                  fa-share-square share"
+                                  onClick={this.sendGIF.bind(this, gif)}
+                              />
+                              <img src={gif.fixed} alt=""/>
+                          </div>
+                      );
+                  }) : <div className="searching h-100 text-center py-5">
+                          <span>
+                              {this.state.message}
+                          </span>
+                      </div>}
+              </div>
+         </div>
+
+    );
+  }
 }
+
+export default GifBox;
