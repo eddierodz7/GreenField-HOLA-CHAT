@@ -1,7 +1,7 @@
-import React from 'react'
-import Users from './Users.js'
-import Messages from './Messages.js'
-import EnterChat from './EnterChat.js'
+import React from 'react';
+import Users from './Users.js';
+import Messages from './Messages.js';
+import EnterChat from './EnterChat.js';
 
 export default class Chat extends React.Component {
 
