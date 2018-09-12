@@ -14,5 +14,17 @@ export default class ChatBox extends React.Component {
       message : e.target.value;
     })
   }
-  
+  onKeyUp(e) {
+    if(e.key === 'Enter') {
+      if(this.state.message.length) {
+        this.props.sendMessage({
+          type: 'message',
+          text: this.state.message
+        });
+        this.setState({message: ''});
+      } else {
+        alert('Enter message');
+      }
+    }
+  }
 }
