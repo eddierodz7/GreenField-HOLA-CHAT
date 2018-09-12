@@ -9,4 +9,10 @@ export default class ChatBox extends React.Component {
       message= '';
     }
   }
+  onChage(e){
+    this.state({
+      message : e.target.value;
+    })
+  }
+  
 }
