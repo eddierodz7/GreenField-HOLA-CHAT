@@ -1,7 +1,7 @@
-import React from 'react';
-import Users from './Users.js';
-import Messages from './Messages.js';
-import EnterChat from './EnterChat.js';
+import React from 'react'
+import Users from './Users'
+import Messages from './Messages'
+import EnterChat from './EnterChat'
 
 export default class Chat extends React.Component {
 
@@ -88,6 +88,7 @@ constructor(props) {
        }.bind(this));
    }
 
+
    render() {
      return (
          <div className= "chat">
@@ -101,7 +102,7 @@ constructor(props) {
           </React.Fragment>
         ) : (
           <EnterChat
-                  setUsername={this.setUserName.bind(this)}
+                  setUsername={this.setUsername.bind(this)}
           />
 
         )}
