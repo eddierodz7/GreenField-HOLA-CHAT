@@ -4,6 +4,7 @@ import Messages from "./Messages";
 import EnterChat from "./EnterChat";
 import socketIOClient from 'socket.io-client';
 
+
 class Chat extends React.Component {
 
     constructor(props){
@@ -15,7 +16,9 @@ class Chat extends React.Component {
             chat_ready : false,
             users : [],
             messages : [],
+            videos: [],
             message : ''
+
         }
     }
 
@@ -33,6 +36,10 @@ class Chat extends React.Component {
         }
         localStorage.setItem('uid', text);
         return text;
+    }
+
+    Videos(videos, e) {
+
     }
 
     setUsername(username, e){
@@ -99,6 +106,7 @@ class Chat extends React.Component {
                             sendMessage={this.sendMessage.bind(this)}
                             messages={this.state.messages}
                         />
+                        
                     </React.Fragment>
                 ) : (
                     <EnterChat

@@ -12,6 +12,20 @@
   font-weight: normal;
   font-style: normal; }
 
+
+  body {
+ background-image: url('https://scontent.fmex10-1.fna.fbcdn.net/v/t1.0-1/p200x200/39835091_1338154602987833_6505911834577469440_n.png?_nc_cat=0&oh=948d597634390a08e8ededd600ce0750&oe=5C24BD65');
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: 550px;
+ }
+
+  ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+  }
+
 .fa {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
