@@ -25,7 +25,7 @@ class Users extends React.Component {
                             <i className="fa fa-user"/> {user}
                         </div>
                     )
-                }) : 'No Users Online'}
+                }) : 'No Users Are Online'}
             </div>
         )
     }

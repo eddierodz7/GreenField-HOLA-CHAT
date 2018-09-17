@@ -6,6 +6,7 @@ import './app.scss';
 import Navbar from './components/Navbar';
 import Chat from './components/chat/Chat';
 
+
 class App extends React.Component{
 
     render(){
@@ -13,8 +14,8 @@ class App extends React.Component{
             <React.Fragment>
                 <Navbar/>
                 <Chat/>
-            </React.Fragment>
-        )
+          </React.Fragment>
+        );
     }
 }
 

@@ -49160,7 +49160,7 @@ var Navbar = function (_React$Component) {
                 { className: "navbar navbar-expand-lg navbar-dark fixed-top bg-dark" },
                 _react2.default.createElement(
                     "a",
-                    { className: "navbar-brand", href: "#" },
+                    { className: "navbar-brand", target: "_blank", href: "http://holacode.com/" },
                     "Hola Chat"
                 ),
                 _react2.default.createElement(
@@ -49169,23 +49169,6 @@ var Navbar = function (_React$Component) {
                         "data-target": "#navbarSupportedContent",
                         "aria-controls": "navbarSupportedContent", "aria-expanded": "false", "aria-label": "Toggle navigation" },
                     _react2.default.createElement("span", { className: "navbar-toggler-icon" })
-                ),
-                _react2.default.createElement(
-                    "div",
-                    { className: "collapse navbar-collapse", id: "navbarSupportedContent" },
-                    _react2.default.createElement(
-                        "ul",
-                        { className: "navbar-nav ml-auto" },
-                        _react2.default.createElement(
-                            "li",
-                            { className: "nav-item float-right" },
-                            _react2.default.createElement(
-                                "a",
-                                { className: "nav-link", target: "_blank", href: "https://github.com/omg-ninjas" },
-                                "Github"
-                            )
-                        )
-                    )
                 )
             );
         }
@@ -49558,7 +49541,7 @@ var EnterChat = function (_React$Component) {
                                     {
                                         className: 'btn btn-outline-secondary',
                                         type: 'submit' },
-                                    'Join'
+                                    'Di Hola'
                                 )
                             )
                         )
@@ -49939,7 +49922,7 @@ var Messages = function (_React$Component) {
                 }) : _react2.default.createElement(
                     "div",
                     { className: "no-message" },
-                    "No messages in chat room"
+                    "The chat is empty di algo!"
                 ),
                 this.state.gif ? _react2.default.createElement(_GifBox2.default, {
                     sendMessage: this.props.sendMessage,
@@ -50022,7 +50005,7 @@ var Users = function (_React$Component) {
                         " ",
                         user
                     );
-                }) : 'No Users Online'
+                }) : 'No Users Are Online'
             );
         }
     }], [{

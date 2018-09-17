@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 class EnterChat extends React.Component{
 
     constructor(props){
@@ -40,7 +41,7 @@ class EnterChat extends React.Component{
                                 <button
                                     className="btn btn-outline-secondary"
                                     type="submit">
-                                    Join
+                                    Di Hola
                                 </button>
                             </div>
                         </div>
