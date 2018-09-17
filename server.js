@@ -2,7 +2,7 @@ let express = require('express');
 let app = require('express')();
 let server = require('http').Server(app);
 let io = require('socket.io')(server);
-let port = 8989;
+let port = 3000;
 
 app.use('/assets', express.static(__dirname + '/dist'));
 

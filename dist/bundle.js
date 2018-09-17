@@ -49181,8 +49181,8 @@ var Navbar = function (_React$Component) {
                             { className: "nav-item float-right" },
                             _react2.default.createElement(
                                 "a",
-                                { className: "nav-link", target: "_blank", href: "https://github.com/omg-ninjas" },
-                                "Github"
+                                { className: "nav-link", target: "_blank", href: "localhost:3000" },
+                                "Log Out"
                             )
                         )
                     )
