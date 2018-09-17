@@ -49,7 +49,7 @@
 /******/ 	};
 /******/
 /******/ 	// create a fake namespace object
-/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 1:  value is a module id, require it
 /******/ 	// mode & 2: merge all properties of value into the ns
 /******/ 	// mode & 4: return value when already ns object
 /******/ 	// mode & 8|1: behave like require
@@ -48000,7 +48000,7 @@ function tryParse(p, str) {
   } catch(e){
     return error();
   }
-  return p; 
+  return p;
 };
 
 /**
@@ -49160,7 +49160,11 @@ var Navbar = function (_React$Component) {
                 { className: "navbar navbar-expand-lg navbar-dark fixed-top bg-dark" },
                 _react2.default.createElement(
                     "a",
+<<<<<<< HEAD
                     { className: "navbar-brand", href: "#" },
+=======
+                    { className: "navbar-brand", href: "https://holacode.com/" },
+>>>>>>> 05422b70e52fbf84fbdf51fd7c35b64c65aac1c6
                     "Hola Chat"
                 ),
                 _react2.default.createElement(
